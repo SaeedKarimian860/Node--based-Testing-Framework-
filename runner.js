@@ -1,15 +1,15 @@
-const fs = require('fs');
+const fs = require("fs");
 
 class Runner {
-    constructor() {
-        this.files = [];
-    }
+  constructor() {
+    this.files = [];
+  }
 
-   async collectFiles(targetPath) {
+  async collectFiles(targetPath) {
     const files = await fs.promises.readdir(targetPath);
-    
+
     return files;
-    }
+  }
 }
 
 module.exports = Runner;
